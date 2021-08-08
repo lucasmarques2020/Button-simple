@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: aquamarine;
+}
+.botao{
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+}
+#menu-check{
+    display: none;
+}
+#menu-check:checked ~ label .burguer{
+    transform: rotate(45deg);
+}
+#menu-check:checked ~ label .burguer::before{
+    transform: rotate(90deg);
+    top: 0;
+}
+#menu-check:checked ~ label .burguer::after{
+    transform: rotate(90deg);
+    bottom: 0;
+}
+.burguer{
+    position: relative;
+    display: block;
+    background-color: black;
+    width: 30px;
+    height: 2px;
+    top: 29px;
+    left: 15px;
+    
+}
+.burguer:before,
+.burguer:after{
+    content: '';
+    background-color: black;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+   
+}
+.burguer:before{
+    top: -10px;
+}
+.burguer:after{
+    bottom: -10px;
+}
+
